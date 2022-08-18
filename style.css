@@ -67,6 +67,92 @@ header > a{
     text-decoration: underline;
 }
 
+/* Main content below header */
+
+.main{ 
+    padding-left: 3%;
+    padding-right: 1%;
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+    display: grid;
+    grid-template-areas: 
+        "section aside" 
+        "article aside";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr calc(100% - 1fr);
+    background: var(--color-top);
+}
+
+.main section{
+    grid-area: section;
+}
+
+.main article{
+    grid-area: article;
+    margin-right: 2rem;
+}
+
+.main aside{
+    grid-area: aside;
+}
+
+section h1{
+    font-weight: lighter;
+}
+
+.main section h1{
+    text-align: left;
+    font-size: 4rem;
+    margin-right: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+article{
+    
+}
+
+article p{
+    text-align: left;
+    margin-top: 2rem;
+}
+
+aside img{
+    border: solid rgb(77, 6, 77) 0.3rem;
+    max-width: 100%;
+    margin: auto;
+}
+
+
+
+nav{
+    color: whitesmoke;
+    background-color: var(--color-top);
+    min-height: calc(100vh - 4rem - 1rem)
+}s
+
+footer{
+    color: whitesmoke;
+    background-color: var(--color-bottom);
+}
+
+@media only screen and (max-width: 1024px)  {
+    .top{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        background: var(--color-top);
+    }
+}
+
+/* Main content below header */
+
+.main{
+    padding-left: 3%;
+    padding-right: 1%;
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+}
+
 
 @media only screen and (max-width: 768px)  {
     .hamburger{
@@ -98,57 +184,3 @@ header > a{
     }
 }
 
-/* Main content below header */
-
-.main{
-    padding-left: 3%;
-    padding-right: 1%;
-    margin-top: 3rem;
-    margin-bottom: 0rem;
-}
-
-.top{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100%;
-    background: var(--color-top);
-}
-
-section h1{
-    font-weight: lighter;
-}
-
-.main section h1{
-    text-align: left;
-    font-size: 4rem;
-    margin-right: 2rem;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-article{
-    margin-right: 2rem;
-}
-
-article p{
-    text-align: left;
-    margin-top: 2rem;
-}
-
-aside img{
-    border: solid rgb(77, 6, 77) 0.3rem;
-    max-width: 100%;
-    margin: auto;
-}
-
-
-
-nav{
-    color: whitesmoke;
-    background-color: var(--color-top);
-    min-height: calc(100vh - 4rem - 1rem)
-}
-
-footer{
-    color: whitesmoke;
-    background-color: var(--color-bottom);
-}
