@@ -75,25 +75,34 @@ header > a{
     margin-top: 3rem;
     margin-bottom: 0rem;
     display: grid;
-    grid-template-areas: 
+    /*grid-template-areas: 
         "section aside" 
-        "article aside";
+        "article aside";*/
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr calc(100% - 1fr);
+    grid-template-rows: 1fr 10fr ;
     background: var(--color-top);
 }
 
 .main section{
-    grid-area: section;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }
 
 .main article{
-    grid-area: article;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 10;
     margin-right: 2rem;
 }
 
 .main aside{
-    grid-area: aside;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 10;
 }
 
 section h1{
@@ -183,4 +192,3 @@ footer{
         display: none;
     }
 }
-
